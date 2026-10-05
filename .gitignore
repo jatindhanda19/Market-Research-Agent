@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.DS_Store
+report.md
+.crewai/
+AGENTS.md
+CLAUDE.md
+CURSOR.md
+GEMINI.md
+
