@@ -1,36 +1,292 @@
-market_research_specialist:
-  role: > Market Research Specialist
-  goal: > 
-        Conduct comprehensive market analysis for AI product idea to undestand 
-        market size, growth trends, industry dynamics, and technology adoption patterns.
-  backstory: > 
-        You are a seasoned market research analyst with 15+ years of experience in the AI
-        and technonlogy sector. You have a proven track record of identifying market opportunities and trends before they become mainstream.
-        Your expertise includes quantitative market sizing, industry trends analysis, and regulatory landscape assesment.
-        You are advised numerous startups on market entry strategies and have deep knowledge og AI adoption patterns across industries.
-        You analytical rigor and data-driven approach have helped companies make informed decisions about market opportunities.
+market_research_task: 
+  description: >
+    Conduct comprehensive market research for the AI product idea: {product_idea}.
 
-copetitive_intelligence_analyst:
-  role: > Competitive Intelligence Analyst
-  goal: >
-        Identify and analyze all direct and indirect competitors, their offerings,
-        strengths, weakness, and market positioning to uncover competitive gaps and opportunities.
-  backstory: >
-        You are expert competitive intellignece analyst specializing in the AI and SaaS market. with 12+ years of experience,
-        you have developed sophisticated frameworks for competitive analysis and market positioning. You excel at reverse-engineering competitors
-        strategies, identifying their product features, pricing models, and go-to-market approaches. Your work has helped numerous startups field their
-        unique positioning in crowded markets. You have a keen eye for spotting market gaps and understanding competitive dynamics. Your analysis is always through,
-        objective and actionable.
+    Your analysis must include:
+    1. Market Size and Growth:
+      - Total Addressable Market (TAM), Serviceable Available Market (SAM), and Serviceable Obtainable Market (SOM) 
+      - Historical growth rates and future projections(3-5 years)
+      - Market maturity stage and growth drivers
+    2. Industry Trends and Dynamics:
+      - Key industry trends,  shaping the market
+      - AI adoption patterns across industries
+      - Industry consolidation or fragmentation trends
+    3. Regulatory Landscape:
+      - Relevant regulations, standards, and compliance requirements
+      - Data privacy and security considerations
+      - Industry-specific regulatory constraints
+      - Upcoming regulatory changes that may impact the market
+    4. Technology Readiness:
+      - Current state of enabling technologies
+      - Infrastructure requirement and availabilty
+      - Integration ecosystem maturity
 
-customer_insights_researcher:
-  role: > Customer Insights Researcher
-  goal: >
-       Develop deep understanding of target customer segements, thier pain points,
-       needs, behaviors, and willingness to pay for the AI product solution.
-  backstory: >
-        You are a customer research expert with 10+ years of experience in B2B and B2C
-        technology markets. You specialize in creating detailed customer personas, conducting needs, analysis, and identifying customer acquistion channels.
-        Your background includes both qualitative research (interviews, focus groups) and quantitative analysis(surveys, data analytics). You have helped dozens
-        of AI startups identifying their ideal customer profile and understand customer psychology. Your indights have directly influenced product-market fit for
-        multiple sucessfull ventures. You excel at translating customer data into actionable business insights.
+      Use web search to gather the most current market data, industry reports,
+      and analyst insights. Cite all sources and provide data-backed conclusions.
+  
+  expected_output: >
+      A deatailed market research report (1500-2000 words) with:
+       -Exective summary of market opportunity
+       - Quatitative market sizing with sources
+       - Industry trend analysis with supporting data
+       - Regulatory landscape overview
+       - Technology readiness assesment
+       - Key findings and implication for the product
+       Format the report with clear section, bullet points for key findings,
+       and include all data sources
+  agent: market_research_specialist
+
+competitive_analysis_task:
+  description: >
+    Conduct through competitive intelligence analysis for the AI product idea: {product_idea}.
+
+    Builiding on the market landscape understanding, your analysis must include:
+
+    1. Competitor Identification:
+      - Direct competitors(solving same probleum, same approach)
+      - Indirect competitors(solving same probleum, different approach)
+      - Adajacent competitors(related solutions that could expand into this space)
+      - Emerging competitors and startups in stealth mode
+    
+    2. Competitive Analysis Matrix:
+       - Company overview(funding, team size, founding year)
+       - Core product features and capabilities
+       - Technology customer segments
+       - Pricing models and tiers
+       - Go-to-market startegy
+       - Strengths and weaknesses
+    3. Market Positioning:
+      - How competitors themselves
+      - Their unique value propostions
+      - Brand preceptions and market reputation
+      - Customer reviews and satisfaction levels
+    4. Competitive Gaps and Opportunites:
+      - Under-served customer needs
+      - Feature gaps in existing solutions
+      - Pricing or opportunities
+      - Market segments with weak competition
+    5. Competitive Threats:
+      - Barriers to entry they  created
+      - Network effects or lock-in strategies
+      - Potential competitive response to new entrant
+
+    Use web search extensively to research each competitor.Analyze their websites, product
+    documentations, customer reviews, and recent news.
+
+  expected_output: >
+    A comprehensive competitive intelligence report (2000-2500 words) with:
+    - Executive summary of competitive landscape 
+    - Detailed competitor profiles (at least 5-7  competitors)
+    - Competitive  comparison matrix (table format)
+    - Market positioning map
+    - Analysis of competitive gaps and opportunities
+    - Strategic recommendations for differentiation
+    Include links to competitor websites and sources for all claims.
+  agent: competitive_intelligence_analyst
+
+customer_insights_task:
+  description: >
+    Develop deep customer insight for AI product idea: {product_idea}
+
+    Leveraging market trends and competitive intelligence, yuor analysis must include:
+
+    1. Target Customer Segmentation:
+      - Identify 3-4 distinct customer segments
+      - Segment size and characteristics
+      - Priortization of segments(primary vs secondary)
+      - Segment attractiveness analysis
+
+    2. Detailed Customer Personas:
+      - For key segment, create detailed personas including:
+          * Demographics and firmographics
+          * Role and responsibilities
+          * Goals and success metrics
+          * Current workflow and tools
+          * Decision-making process and criteria
+          * Budget authority and procurement process
+
+    3. Pain Points and Needs Analysis:
+       - Critical pain points the product would solve
+       - Current workarounds and their limitations
+       - urgency and severity of probleums
+       - unmet needs in current solutions (from competive analysis)
+
+    4. Customer Journey Mapping:
+       - Awarness stage: How customer discover solutions
+       - Consideration: Evaluation criteria and process
+       - urgency and severity of probleums
+       - Unmet needs in current solutions(from competitive analysis)
+
+    5. Value Proposition Validation:
+       - What outcomes customer truely care about
+       - willingness to pay indicators
+       - Expected RIO or value metrics
+       - Deal-breaker and must have features
+
+    6. Customer Acquisition Channels:
+      - Where target customer can be found
+      - Most effective marketing channels
+      - Community and influence landscape
+      - Partnership oppoutunities
+    Use web search to find customer review of competitors products, from discussion social 
+    media convesation, and industry survey to understand real customer voices.
+  expected_outputs: >
+      A comprehensive customer insights report (2000-2500 words) with:
+      - Executive summary of customer landscape
+      - Customer segmentation framework with priortization
+      - Detailed personas for 2-3 primary segments (with visual elements if possible)
+      - Pain points matrix mapping probleums to segments
+      - Customer jouney maps
+      - value proposition framework
+      - Customer acquisition strategy recommendation
+      Include real customer quotes from  reviews nad forms wher possible.
+  agent: customer_insights_researcher
+  
+product_strategy_task:
+  description: >
+    Develop a comprehensive product strategy for  the AI product idea: {product_idea},
+
+    Synthesizing insights from market research, competitive analysis, and customer research
+    your strategy must include:
+
+    1. Product Vision and Positioning:
+      - clear product vision statement
+      - Unique value proposition
+      - Positioning startegy vs. competitors
+      - Brand personality and messaging direction
+
+    2. MVP Fearture Priortization:
+      - Core features foe MPV(must-have)
+      - Supporting features for MPV(should-haves)
+      - Features to defer post-MPV(nice-to-haves)
+      - Features prioritization rational using frameworks like:
+         * Customer impact vs. development effort
+         * Competitive necessity vs. differentiation
+         * Technical dependencies
+      - Create a feature prioritization matrix
+    
+    3. Product Differentiation strategy:
+      - Key differentiators vs. each major competitors
+      - Defensibility to differentiation (moats)
+      - How differentiation align with customer priorities
+      - Areas where "good enough" is acceptable
+    
+    4. Technical Feasibility Assesment:
+      - Technology stack recommendation
+      - Technical risks and mitigation strategies
+      - Required technical capabilities and skills
+      - Infrastructure and scalability considerations
+      - Integration requirements
+      - Data requirements and availability
+
+    5. Develoment Roadmap:
+       - Phase 1: MVP(0-3 months)
+       - Phase 2: Product-market fit iteration(3-6 months)
+       - Phase 3: Scale and expansion(6-12 months)
+       - Key milestones and success metrics for each phase
+
+    6. Sucess Metrics:
+       - Product KPIs to track
+       - User engagement metrics
+       - Product-market fit indicators
+       - Techical performance benchmarks
+    
+    Use technical documentaion, architecture blogs, and technonlogy trends reports to
+    validate technical feasibility.
+  expected_outputs: >
+     A detailed product strategy document(2500-300 words) with:
+     - Executive summary of product strategy
+     - Product vision and positioning statement
+     - MVP feature list with priortization matrix(table format)
+     - Differentation startegy vs. each major competitor
+     - Technical architecture recommendation
+     - Risk assessment and mitigation strategies
+     - 12 months product roadmap with phases and milestones
+     - Sucess metrics framework
+     Include visual elements like features priortization matrix and roadmap timeline.
+  agent: product_strategy_advisor
+
+business_analyst_task:
+  description: >
+     Create a comprehensive business analysis and final recommendation report for AI product idea: {product_idea}
+
+     Synthesizing  All prior research and analysis, Uour report must include:
+
+     1. Executive Summary:
+        - One-page overview of the opportunity
+        - Key findings from each research area
+        - Overall recommendation (go/no-go/ Conditionally)
+        - Critical success factors
+      2. Pricing Strategy:
+          - Recommnded pricing model (subscription, Usage-based, freemium, etc.)
+          - Pricing tiers and packaging
+          - Price points with justification based on:
+              * Customer willingness to pay
+              * Competitor pricing benchmarks
+              * Value delivered to customer
+              * Cost structure considerations
+          - Pricing psychology and positioning
+          - Discounting and promotional strategy
+      3. Revenue Model and Projection:
+          - Revenue streams
+          - Unit economics (CAC, LTV, payback periods)
+          - 3-year revenue projections with assumptions
+          - Break-even analysis
+          - Path to profitability
+      4. Go-to-market Strategy:
+          - Launch strategy and timeline
+          - Customer acquistion strategy
+          - Sales model(self-service, inside sales, field sales)
+          - Marketing channel mix
+          - Partnership startegy
+          - Initial target market focus
+      5. Resource Requirements:
+          - Team compostion and hiring plan
+          - Technology infrastructure costs
+          - Marketing and sales budget
+          - Total funding requirement
+          - Burn rate and runway projections
+      6. Risk Analysis:
+         - Market risks and mitigation strategies
+         - Competitive risk and responses
+         - Technical risks and contingency plans
+         - Execution risks and dependencies
+         - Financial risks and sensitivities
+      7. Investment Thesis:
+         - why this opportunity is attractive
+         - key value drivers
+         - Exit potential and comparables
+         - Investment risks to consider
+      8. Final Recommendation:
+        - Clear GO/NO-GO recommendation with reasoning
+        - If Go: Critical next steps and priorities
+        - If No-Go: what would need to change
+        - If Conditional: What needs to be validated first
+      
+      This is the culmination report that brings everything together. Make it 
+      compelling, data-driven, and actionable.
+  
+  expected_output: >
+      A Comprensive  business analysis report(1000-3000 words) formatted as
+      professional investment memo with:
+
+      - Executive summary (1 page)
+      - Pricing strategy with detailed tier breakdown(table format)
+      - Financial projections (tables with 3-year forecast)
+      - Go-to-market plan
+      - Resource requirements and budget
+      - Risk matrix (likelihood vs impact)
+      - Investment thesis
+      - Final recommendation with clear reasoning
+    
+      The report should be formatted professionally with:
+      - Clear section headers
+      - Executive-friendly visualization and tables
+      - Data citations from all previous research
+      - Actionable next steps
+      This should be a report ready to present to investors or  executive leadership.
+  agent : business_analyst
+   
         
+  
+
